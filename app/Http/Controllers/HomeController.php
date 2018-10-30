@@ -24,16 +24,39 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    function index()
     {
-        return view('home');
+        return view('pages.home');
     }
+
+    function about()
+    {
+        return view('pages.about');
+    }
+
+    function contact()
+    {
+        return view('pages.contact');
+    }
+
+    public function store(Request $request)
+    {
+        $name = $request->name;
+        return redirect()->route('thanks', ['name' =>$name]);
+    }
+
+    public function thanks($name, Request $request){
+
+        return view('pages.thankyou')->with(compact('name'));
+    }
+
     public function profile()
     {
         $users=User::all();
-        dd($users->count());
+        //dd($users->count());
 
-        return view('profile', ['users'=> $users]);
+        return view('pages.profile', ['users'=> $users]);
     }
+
 
 }

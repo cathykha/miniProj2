@@ -14,10 +14,11 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Welcome to Home Page!
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
