@@ -15,12 +15,20 @@ class UserTest extends TestCase
      * @return void
      */
 
-    //Test Insert A User
+    //Test insert a user
     public function testInsertUser()
     {
         $user = new User();
         $user->name = 'April';
         $user->email = 'april@example.com';
+
+        $this->assertTrue(true);
+    }
+
+    //Update a user to Steve Smith
+    public function testUpdateName()
+    {
+        $user = User::where('id',[1])->update(['name' => 'Steve Smith']);
 
         $this->assertTrue(true);
     }
