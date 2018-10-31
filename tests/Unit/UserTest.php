@@ -40,6 +40,16 @@ class UserTest extends TestCase
 
         $this->assertTrue(true);
     }
+
+    //Update a user to Steve Smith
+    public function testCountUser()
+    {
+        $user = User::count();
+
+        $this->assertTrue(true);
+    }
 }
+
+
 
 

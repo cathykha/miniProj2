@@ -53,7 +53,6 @@ class HomeController extends Controller
     public function profile()
     {
         $users=User::all();
-        //dd($users->count());
 
         return view('pages.profile', ['users'=> $users]);
     }
