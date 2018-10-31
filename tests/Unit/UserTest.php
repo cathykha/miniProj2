@@ -36,7 +36,8 @@ class UserTest extends TestCase
     //Delete a user
     public function testDeleteUser()
     {
-        $user = User::where('id','=', [51])->delete();
+        $user = User::where('id','=', [50])->delete();
+
 
         $this->assertTrue(true);
     }

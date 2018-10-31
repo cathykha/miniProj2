@@ -41,6 +41,16 @@ class CarTest extends TestCase
 
         $this->assertTrue(true);
     }
+
+    //Count number of cars
+    public function testCountCar()
+    {
+        $car = Car::All();
+        $recordCount = $car->count();
+
+        $this->assertTrue(true);
+    }
+
 }
 
 
