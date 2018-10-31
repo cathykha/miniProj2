@@ -33,6 +33,14 @@ class CarTest extends TestCase
 
         $this->assertTrue(true);
     }
+
+    //Delete a car
+    public function testDeleteCar()
+    {
+        $car = Car::where('id','=', [2])->delete();
+
+        $this->assertTrue(true);
+    }
 }
 
 

@@ -33,7 +33,7 @@ class UserTest extends TestCase
         $this->assertTrue(true);
     }
 
-    //Update a user to Steve Smith
+    //Delete a user
     public function testDeleteUser()
     {
         $user = User::where('id','=', [51])->delete();
@@ -41,7 +41,7 @@ class UserTest extends TestCase
         $this->assertTrue(true);
     }
 
-    //Update a user to Steve Smith
+    //Count number of users
     public function testCountUser()
     {
         $user = User::count();
