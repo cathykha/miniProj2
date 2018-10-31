@@ -66,6 +66,14 @@ class CarTest extends TestCase
 
         $this->assertContains($car->make, ['honda', 'toyota', 'ford']);
     }
+
+    //Test car's model in string
+    public function testCarModel()
+    {
+        $car = Car::find(1);
+
+        $this->assertInternalType('string', $car -> model);
+    }
 }
 
 
