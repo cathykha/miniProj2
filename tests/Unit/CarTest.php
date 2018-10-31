@@ -25,6 +25,14 @@ class CarTest extends TestCase
 
         $this->assertTrue(true);
     }
+
+    //Update a car year to 2000
+    public function testUpdateCar()
+    {
+        $car = Car::where('id',[50])->update(['year' => '2000']);
+
+        $this->assertTrue(true);
+    }
 }
 
 
